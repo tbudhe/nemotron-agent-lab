@@ -54,6 +54,14 @@ Long-term goal: build my own version and deploy it live.
   hosted vs self-hosted NIM, reranker on/off).
 - 3 talking points I could use in an NVIDIA interview.
 
+## Brev GPU instance (A100, billed while RUNNING)
+Instance: `build-an-agent-workshop-8e76b8`
+- Start of session: run `brev start build-an-agent-workshop-8e76b8`, then poll `brev ls`
+  until STATUS=RUNNING and SHELL=READY before any GPU work.
+- End of session: run `brev stop build-an-agent-workshop-8e76b8`, then confirm `brev ls`
+  shows STOPPED. Never end a session with it RUNNING or STOPPING.
+- Hosted-NIM-only sessions don't need the instance — ask before starting it.
+
 ## End of every session
 - Update STATUS.md and add a LEARNING_NOTES.md block.
-- Remind me to `git push` and `brev stop <instance>`.
+- Remind me to `git push`. Stop the Brev instance (see above) and confirm STOPPED.
